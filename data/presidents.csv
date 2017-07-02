@@ -1,219 +1,1 @@
-year,president
-1789,Washington
-1790,Washington
-1791,Washington
-1792,Washington
-1793,Washington
-1794,Washington
-1795,Washington
-1796,Washington
-1797,J Adams
-1798,J Adams
-1799,J Adams
-1800,J Adams
-1801,Jefferson
-1802,Jefferson
-1803,Jefferson
-1804,Jefferson
-1805,Jefferson
-1806,Jefferson
-1807,Jefferson
-1808,Jefferson
-1809,Madison
-1810,Madison
-1811,Madison
-1812,Madison
-1813,Madison
-1814,Madison
-1815,Madison
-1816,Madison
-1817,Monroe
-1818,Monroe
-1819,Monroe
-1820,Monroe
-1821,Monroe
-1822,Monroe
-1823,Monroe
-1824,Monroe
-1825,J Q Adams
-1826,J Q Adams
-1827,J Q Adams
-1828,J Q Adams
-1829,Jackson
-1830,Jackson
-1831,Jackson
-1832,Jackson
-1833,Jackson
-1834,Jackson
-1835,Jackson
-1836,Jackson
-1837,van Buren
-1838,van Buren
-1839,van Buren
-1840,van Buren
-1841,Harrison I
-1842,Tyler
-1843,Tyler
-1844,Tyler
-1845,Polk
-1846,Polk
-1847,Polk
-1848,Polk
-1849,Taylor
-1850,Fillmore
-1851,Fillmore
-1852,Fillmore
-1853,Pierce
-1854,Pierce
-1855,Pierce
-1856,Pierce
-1857,Buchanan
-1858,Buchanan
-1859,Buchanan
-1860,Buchanan
-1861,Lincoln
-1862,Lincoln
-1863,Lincoln
-1864,Lincoln
-1865,Johnson I
-1866,Johnson I
-1867,Johnson I
-1868,Johnson I
-1869,Grant
-1870,Grant
-1871,Grant
-1872,Grant
-1873,Grant
-1874,Grant
-1875,Grant
-1876,Grant
-1877,Hayes
-1878,Hayes
-1879,Hayes
-1880,Hayes
-1881,Garfield
-1882,Arthur
-1883,Arthur
-1884,Arthur
-1885,Cleveland I
-1886,Cleveland I
-1887,Cleveland I
-1888,Cleveland I
-1889,Harrison II
-1890,Harrison II
-1891,Harrison II
-1892,Harrison II
-1893,Cleveland II
-1894,Cleveland II
-1895,Cleveland II
-1896,Cleveland II
-1897,McKinley
-1898,McKinley
-1899,McKinley
-1900,McKinley
-1901,T Roosevelt
-1902,T Roosevelt
-1903,T Roosevelt
-1904,T Roosevelt
-1905,T Roosevelt
-1906,T Roosevelt
-1907,T Roosevelt
-1908,T Roosevelt
-1909,Taft
-1910,Taft
-1911,Taft
-1912,Taft
-1913,Wilson
-1914,Wilson
-1915,Wilson
-1916,Wilson
-1917,Wilson
-1918,Wilson
-1919,Wilson
-1920,Wilson
-1921,Harding
-1922,Harding
-1923,Harding
-1924,Coolidge
-1925,Coolidge
-1926,Coolidge
-1927,Coolidge
-1928,Coolidge
-1929,Hoover
-1930,Hoover
-1931,Hoover
-1932,Hoover
-1933,F Roosevelt
-1934,F Roosevelt
-1935,F Roosevelt
-1936,F Roosevelt
-1937,F Roosevelt
-1938,F Roosevelt
-1939,F Roosevelt
-1940,F Roosevelt
-1941,F Roosevelt
-1942,F Roosevelt
-1943,F Roosevelt
-1944,F Roosevelt
-1945,Truman
-1946,Truman
-1947,Truman
-1948,Truman
-1949,Truman
-1950,Truman
-1951,Truman
-1952,Truman
-1953,Eisenhower
-1954,Eisenhower
-1955,Eisenhower
-1956,Eisenhower
-1957,Eisenhower
-1958,Eisenhower
-1959,Eisenhower
-1960,Eisenhower
-1961,Kennedy
-1962,Kennedy
-1963,Kennedy
-1964,Johnson II
-1965,Johnson II
-1966,Johnson II
-1967,Johnson II
-1968,Johnson II
-1969,Nixon
-1970,Nixon
-1971,Nixon
-1972,Nixon
-1973,Nixon
-1974,Nixon
-1975,Ford
-1976,Ford
-1977,Carter
-1978,Carter
-1979,Carter
-1980,Carter
-1981,Reagan
-1982,Reagan
-1983,Reagan
-1984,Reagan
-1985,Reagan
-1986,Reagan
-1987,Reagan
-1988,Reagan
-1989,Bush I
-1990,Bush I
-1991,Bush I
-1992,Bush I
-1993,Clinton
-1994,Clinton
-1995,Clinton
-1996,Clinton
-1997,Clinton
-1998,Clinton
-1999,Clinton
-2000,Clinton
-2001,Bush II
-2002,Bush II
-2003,Bush II
-2004,Bush II
-2005,Bush II
-2006,Bush II
+year,name,party1947,Truman,(D)1948,Truman,(D)1949,Truman,(D)1950,Truman,(D)1951,Truman,(D)1952,Truman,(D)1953,Eisenhower,(R)1954,Eisenhower,(R)1955,Eisenhower,(R)1956,Eisenhower,(R)1957,Eisenhower,(R)1958,Eisenhower,(R)1959,Eisenhower,(R)1960,Eisenhower,(R)1961,Kennedy,(D)1962,Kennedy,(D)1963,Kennedy,(D)1964,Johnson,(D)1965,Johnson,(D)1966,Johnson,(D)1967,Johnson,(D)1968,Johnson,(D)1969,Nixon,(R)1970,Nixon,(R)1971,Nixon,(R)1972,Nixon,(R)1973,Nixon,(R)1974,Nixon,(R)1975,Ford,(R)1976,Ford,(R)1977,Carter,(D)1978,Carter,(D)1979,Carter,(D)1980,Carter,(D)1981,Reagan,(R)1982,Reagan,(R)1983,Reagan,(R)1984,Reagan,(R)1985,Reagan,(R)1986,Reagan,(R)1987,Reagan,(R)1988,Reagan,(R)1989,Bush,(R)1990,Bush,(R)1991,Bush,(R)1992,Bush,(R)1993,Clinton,(D)1994,Clinton,(D)1995,Clinton,(D)1996,Clinton,(D)1997,Clinton,(D)1998,Clinton,(D)1999,Clinton,(D)2000,Clinton,(D)2001,Bush Jr,(R)2002,Bush Jr,(R)2003,Bush Jr,(R)2004,Bush Jr,(R)2005,Bush Jr,(R)2006,Bush Jr,(R)2007,Bush Jr,(R)2008,Bush Jr,(R)2009,Obama,(D)2010,Obama,(D)2011,Obama,(D)2012,Obama,(D)2013,Obama,(D)2014,Obama,(D)2015,Obama,(D)
