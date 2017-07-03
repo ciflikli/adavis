@@ -1,7 +1,7 @@
 source("global.R",local=TRUE)
 
 ui <- dashboardPage(
-  dashboardHeader(title = "ADA Voting Scores"),
+  dashboardHeader(title = "ADA Voting Scores", titleWidth = "250px"),
   dashboardSidebar(
     sidebarMenu(
       selectInput("Party", "Select Party", choices = c("Democrat", "Republican")),
@@ -17,7 +17,59 @@ ui <- dashboardPage(
                href = "https://github.com/ciflikli/adamap"),
       menuItem("gokhanciflikli.com", icon = icon("external-link"),
                href = "https://www.gokhanciflikli.com"))),
-  dashboardBody(includeCSS("styles.css"), fluidPage(highchartOutput("hcmap", height = 600))))
+  dashboardBody(
+    fluidPage(fluidRow(column(12, highchartOutput("hcmap", height = 600))),
+              fluidRow(column(12, plotOutput("chart", height = 150)))),
+              useShinyjs(), tags$head({tags$style(HTML("
+                                           .skin-blue .main-header .navbar {
+                                           background-color: #db4c3f;
+                                           }
+                                           .skin-blue .main-header .navbar .sidebar-toggle:hover {
+                                           background-color: #db4c3f;
+                                           }
+                                           .skin-blue .main-header .navbar .sidebar-toggle:hover {
+                                           color: #FFFFFF;
+                                           background: rgba(0,0,0,0);
+                                           }
+                                           .main-sidebar, .left-side {
+                                           width: 250px;
+                                           }
+                                           @media (min-width: 768px) {
+                                           .content-wrapper,
+                                           .right-side,
+                                           .main-footer {
+                                           margin-left: 250px;
+                                           }
+                                           }
+                                           @media (max-width: 767px) {
+                                           .sidebar-open .content-wrapper,
+                                           .sidebar-open .right-side,
+                                           .sidebar-open .main-footer {
+                                           -webkit-transform: translate(250px, 0);
+                                           -ms-transform: translate(250px, 0);
+                                           -o-transform: translate(250px, 0);
+                                           transform: translate(250px, 0);
+                                           }
+                                           }
+                                           @media (max-width: 767px) {
+                                           .main-sidebar,
+                                           .left-side {
+                                           -webkit-transform: translate(-250px, 0);
+                                           -ms-transform: translate(-250px, 0);
+                                           -o-transform: translate(-250px, 0);
+                                           transform: translate(-250px, 0);
+                                           }
+                                           }
+                                           @media (min-width: 768px) {
+                                           .sidebar-collapse .main-sidebar,
+                                           .sidebar-collapse .left-side {
+                                           -webkit-transform: translate(-250px, 0);
+                                           -ms-transform: translate(-250px, 0);
+                                           -o-transform: translate(-250px, 0);
+                                           transform: translate(-250px, 0);
+                                           }
+                                           }"))}))
+  )
   
 server <- function(input, output){
   
@@ -94,14 +146,31 @@ server <- function(input, output){
       write.csv(dataset, file)
     })
   
-  dataset <- data %>%
-    group_by(Year, StateAbbr, Chamber, Party) %>%
-    summarise(ADA = round(mean(Nominal.Score), 2),
-              aADA = round(mean(Adjusted.Score), 2))
-  
   mapData <- reactive({
     dataset <- dataset[dataset$Year == input$Year & dataset$Party == input$Party &
                          dataset$Chamber == ifelse(input$Chamber == "House", 1, 2), ]
+  })
+  
+  output$chart <- renderPlot({
+    
+    p <- ggbarplot(trend[trend$Year == input$Year & trend$Chamber == ifelse(input$Chamber == "House", 1, 2) &
+                   trend$Party == input$Party, ], size = .1,
+                   x = "StateAbbr", y = ifelse(input$ADA == "Nominal", "Diff", "Diff2"),
+                   fill = ifelse(input$ADA == "Nominal", "Threshold", "Threshold2"),
+                   color = "#ecf0f5",
+                   palette = c("#18469e", "#ea5148"),
+                   sort.val = "asc",
+                   sort.by.groups = FALSE,
+                   x.text.angle = 90,
+                   ylab = "Change from Last Year",
+                   xlab = FALSE,
+                   legend.title = "Trend Direction")
+   p +
+   bgcolor("#ecf0f5") +
+   geom_abline(slope = 0, color = "gray") +
+   theme(legend.background = element_rect("#ecf0f5"), panel.background = element_rect("#ecf0f5"),
+         plot.background = element_rect("#ecf0f5"))
+   
   })
   
   output$hcmap <- renderHighchart({
