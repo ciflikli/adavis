@@ -7,20 +7,20 @@ ui <- dashboardPage(
       selectInput("Party", "Select Party", choices = c("Democrat", "Republican")),
       selectInput("Chamber", "Select Chamber", choices = c("House", "Senate")),
       selectInput("ADA", "Select ADA Score", choices = c("Nominal", "Adjusted")),
-      sliderInput("Year", "Select Year", 1963, min = 1947, max = 2015, animate = TRUE, sep = ""),
+      sliderInput("Year", "Select Year", 1963, min = 1947, max = 2015, animate = animationOptions(interval = 5000), sep = ""),
       menuItem(imageOutput("avatar", height = "5%")),
       menuItem(textOutput("president")),
       menuItem(textOutput("average")),
       menuItem(textOutput("average2")),
-      #downloadButton("downloadData", "Download Dataset"),
       menuItem("Source code", icon = icon("github"), 
                href = "https://github.com/ciflikli/adamap"),
       menuItem("gokhanciflikli.com", icon = icon("external-link"),
                href = "https://www.gokhanciflikli.com"))),
-  dashboardBody(
-    fluidPage(fluidRow(column(12, highchartOutput("hcmap", height = 600))),
+  dashboardBody(includeCSS("www/custom.css"),
+    fluidPage(fluidRow(column(12, withSpinner(highchartOutput("hcmap", height = 600)))),
               fluidRow(column(12, plotOutput("chart", height = 150)))),
               useShinyjs(), tags$head({tags$style(HTML("
+                                           ELEMENT.classList.remove('a');
                                            .skin-blue .main-header .navbar {
                                            background-color: #db4c3f;
                                            }
@@ -157,7 +157,7 @@ server <- function(input, output){
                    trend$Party == input$Party, ], size = .1,
                    x = "StateAbbr", y = ifelse(input$ADA == "Nominal", "Diff", "Diff2"),
                    fill = ifelse(input$ADA == "Nominal", "Threshold", "Threshold2"),
-                   color = "#ecf0f5",
+                   color = "white", width = 1,
                    palette = c("#18469e", "#ea5148"),
                    sort.val = "asc",
                    sort.by.groups = FALSE,
@@ -169,18 +169,21 @@ server <- function(input, output){
    bgcolor("#ecf0f5") +
    geom_abline(slope = 0, color = "gray") +
    theme(legend.background = element_rect("#ecf0f5"), panel.background = element_rect("#ecf0f5"),
-         plot.background = element_rect("#ecf0f5"))
-   
+         plot.background = element_rect(fill = "#ecf0f5", colour = "#ecf0f5"),
+         plot.margin = unit(x = c(0, 0, 0, 0), units = "mm"),
+         text = element_text(size = 10, family = "Source Sans Pro"))
   })
   
   output$hcmap <- renderHighchart({
     
-    hcmap(map = "countries/us/us-all", data = mapData(),
-          value = ifelse(input$ADA == "Nominal", "ADA", "aADA"), joinBy = c("hc-a2", "StateAbbr"), name = "ADA Voting Score",
-          borderColor = "#DADADA", dataLabels = list(enabled = TRUE, format = '{point.name}')) %>%
-          hc_title(text = "Americans for Democratic Action Voting Scores 1947-2015") %>% 
-          hc_legend(layout = "vertical", align = "right",
-                    floating = TRUE, valueDecimals = 0, valueSuffix = "%")
+    hc <- highchart(type = "map") %>%
+          hc_add_series_map(map = usData, df = mapData(), value = ifelse(input$ADA == "Nominal", "ADA", "aADA"),
+                            joinBy = c("hc-a2", "StateAbbr"), name = "ADA Voting Score", nullColor = "#DADADA",
+                            borderColor = "white", dataLabels = list(enabled = TRUE, format = '{point.name}')) %>%
+          hc_title(text = "Americans for Democratic Action Voting Scores 1947-2015") %>%
+          hc_legend(layout = "vertical", align = "right", floating = TRUE, valueDecimals = 0)
+    
+    hc_colorAxis(hc, stops = stops)
   })
 }
 
