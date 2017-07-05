@@ -20,7 +20,6 @@ ui <- dashboardPage(
     fluidPage(fluidRow(column(12, withSpinner(highchartOutput("hcmap", height = 600)))),
               fluidRow(column(12, plotOutput("chart", height = 150)))),
               useShinyjs(), tags$head({tags$style(HTML("
-                                           ELEMENT.classList.remove('a');
                                            .skin-blue .main-header .navbar {
                                            background-color: #db4c3f;
                                            }
@@ -72,7 +71,7 @@ ui <- dashboardPage(
   )
   
 server <- function(input, output){
-  
+
   output$avatar <- renderImage({
     if (president$name[president$year == input$Year] == "Truman")
     return(list(

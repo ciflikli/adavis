@@ -31,6 +31,7 @@ trend <- dataset  %>%
   group_by(StateAbbr, Chamber, Party) %>%
   mutate(Diff = ADA - lag(ADA),
          Diff2 = aADA - lag(aADA))
+trend <- na.omit(trend)
 
 trend$Threshold <- factor(ifelse(trend$Diff > 0, "Liberal", "Conservative"),
                           levels = c("Liberal", "Conservative"))
