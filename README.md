@@ -22,7 +22,7 @@ Mapping ADA Voting Scores 1947-2015. The Shiny app is hosted at https://gokhan.s
 * Add a coupled hover event in Shiny to link the map and the deviation plot (currently separate)
 * Instead of omitting the ```NAs``` that represent states that has no legislator from the selected chamber/party combination, include them as a category so upon hovering they display a text (e.g. 'No Legislator', currently not selectable)
 * Have more hover data (e.g. number of legislators, min/max voting scores, change from previous year, comparison to national average)
-* Bulding on the above, either have multiple maps on display at the same time (1 x 1, party subset; or 2 x 2, chamber/party crosstab) to get a snapshot of the year
+* Building on the above, have multiple maps on display at the same time (1 x 1, party subset; or 2 x 2, chamber/party cross-tab) to get a snapshot of the year
 * Give the user an option to arrange the panels: Change the size of the map, number of maps displayed etc. (especially useful when linked highlighting works)
 
 ## Style
