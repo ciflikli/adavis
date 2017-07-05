@@ -8,7 +8,7 @@ Mapping ADA Voting Scores 1947-2015. The Shiny app is hosted at https://gokhan.s
 * Data can be grouped by year, state, chamber, and party
 * Data visualization based on ```highcharter``` and ```ggpubr``` packages
 
-#Current Capabilities
+# Current Capabilities
 
 * Charts a single year/chamber/party combination on a US Admin 1 (state-level) map displaying either nominal or adjusted ADA voting score (state average)
 * Plots change from previous year (state-level)
@@ -17,7 +17,7 @@ Mapping ADA Voting Scores 1947-2015. The Shiny app is hosted at https://gokhan.s
 * Displays then-president's portrait (fancy reminder?)
 * Offers animated slider capability; however this requires fast internet connection (current display time: 5000 ms)
 
-#Planned Improvements
+# Planned Improvements
 * Add a coupled hover event in Shiny to link the map and the deviation plot (currently separate)
 * Instead of omitting the ```NAs``` that represent states that has no legislator from the selected chamber/party combination, include them as a category so upon hovering they display a text (e.g. 'No Legislator', currently not selectable)
 * Have more hover data (e.g. number of legislators, min/max voting scores, change from previous year, comparison to national average)
