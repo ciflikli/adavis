@@ -18,6 +18,9 @@ Mapping ADA Voting Scores 1947-2015. The Shiny app is hosted at https://gokhan.s
 * Offers animated slider capability; however this requires fast internet connection (current display time: 5000 ms)
 
 # Planned Improvements
+## Prediction
+* Add basic regressors to provide forecasts of future votes
+
 ## Substance
 * Add a coupled hover event in Shiny to link the map and the deviation plot (currently separate)
 * Instead of omitting the ```NAs``` that represent states that has no legislator from the selected chamber/party combination, include them as a category so upon hovering they display a text (e.g. 'No Legislator', currently not selectable)

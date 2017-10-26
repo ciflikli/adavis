@@ -1,7 +1,7 @@
-source("global.R",local=TRUE)
+source("global.R", local = TRUE)
 
 ui <- dashboardPage(
-  dashboardHeader(title = "ADA Voting Scores", titleWidth = "250px"),
+  dashboardHeader(title = "ADA Voting Scores [Beta]", titleWidth = "250px"),
   dashboardSidebar(
     sidebarMenu(
       selectInput("Party", "Select Party", choices = c("Democrat", "Republican")),
