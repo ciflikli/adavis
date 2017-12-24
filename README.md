@@ -15,14 +15,22 @@ A visual exploration of the Americans for Democratic Action (ADA) Voting Scores.
 # State of the Union
 * Charts a single Year > Chamber > Party combination on a first-level political (administrative) division (state) map displaying either nominal or adjusted ADA voting score (state average).
 
+![](/img/statebins.png)
+
 # Change from Last Year
 * Plots LQ score change from previous year (state-level). Hover info offers the precise amount in percentages.
+
+![](/img/plotly.png)
 
 # Head-to-Head
 * Allows the users to select two states and compare their voting scores in a specified timeframe. Works under the C/P subset; i.e. it compares representatives from the same party/chamber.
 
+![](/img/marginal.png)
+
 # Representatives
 * Enables looking up specific representatives (3,371 in total); offers descriptives on Year, Congress, District and plots their LQ scores, mean, and plus/minus one standard deviation.
+
+![](/img/pelosi.png)
 
 #Legacy App
 * The code for the legacy app (adamap) has been moved to the legacy folder. The Shiny app is still hosted as https://gokhan.shinyapps.io/adamap/
