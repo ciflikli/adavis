@@ -1,33 +1,28 @@
-# adamap v1.0
-Mapping ADA Voting Scores 1947-2015. The Shiny app is hosted at https://gokhan.shinyapps.io/adamap/
+# adavis
+A visual exploration of the Americans for Democratic Action (ADA) Voting Scores. The Shiny app is hosted at https://gokhan.shinyapps.io/adavis/
 
 # Description
-* Utilizes about 36,000 US legislator voting scores originally collected by [the Americans for Democratic Action organization (ADA)](adaction.org)
+* Utilizes about 36,000 US legislator voting scores originally collected by [the Americans for Democratic Action organization (ADA)](adaction.org) between 1948 and 2015
+* "[Annual voting records] served as the standard measure of political liberalism. Combining 20 key votes on a wide range of social and economic issues, both domestic and international, the Liberal Quotient (LQ) provides a basic overall picture of an elected official's political position."
 * Actual data compiled by Justin Briggs [Blog post](http://trialstravails.blogspot.co.uk/2017/01/adjusted-ada-scores-from-1947-2015.html) | [.xlsx file](http://bit.ly/2j1TXfE)
 * Uses both nominal and adjusted ADA scores [Procedure](http://timgroseclose.com/adjusted-interest-group-scores/)
 * Data can be grouped by year, state, chamber, and party
-* Data visualization based on ```highcharter``` and ```ggpubr``` packages
+* Data visualization using ```statebins, plotly, ggExtra``` and base R
+* Users can change viridis colour palettes (viridis, plasma, inferno, and magma) and direction (higher values light or dark)
 
-# Current Capabilities
+![](/img/plasma.png)
 
-* Charts a single year/chamber/party combination on a US Admin 1 (state-level) map displaying either nominal or adjusted ADA voting score (state average)
-* Plots change from previous year (state-level)
-* Provides national averages for selected chamber/party combination 
-* Shows then-president's name (reminder)
-* Displays then-president's portrait (fancy reminder?)
-* Offers animated slider capability; however this requires fast internet connection (current display time: 5000 ms)
+# State of the Union
+* Charts a single Year > Chamber > Party combination on a first-level political (administrative) division (state) map displaying either nominal or adjusted ADA voting score (state average).
 
-# Planned Improvements
-## Prediction
-* Add basic regressors to provide forecasts of future votes
+# Change from Last Year
+* Plots LQ score change from previous year (state-level). Hover info offers the precise amount in percentages.
 
-## Substance
-* Add a coupled hover event in Shiny to link the map and the deviation plot (currently separate)
-* Instead of omitting the ```NAs``` that represent states that has no legislator from the selected chamber/party combination, include them as a category so upon hovering they display a text (e.g. 'No Legislator', currently not selectable)
-* Have more hover data (e.g. number of legislators, min/max voting scores, change from previous year, comparison to national average)
-* Building on the above, have multiple maps on display at the same time (1 x 1, party subset; or 2 x 2, chamber/party cross-tab) to get a snapshot of the year
-* Give the user an option to arrange the panels: Change the size of the map, number of maps displayed etc. (especially useful when linked highlighting works)
+# Head-to-Head
+* Allows the users to select two states and compare their voting scores in a specified timeframe. Works under the C/P subset; i.e. it compares representatives from the same party/chamber.
 
-## Style
-* Disable the ```<a></a>``` tag on the sidebar for entries that are not meant to be clickable (e.g. the name of the president)
-* Include a brief description section
+# Representatives
+* Enables looking up specific representatives (3,371 in total); offers descriptives on Year, Congress, District and plots their LQ scores, mean, and plus/minus one standard deviation.
+
+#Legacy App
+* The code for the legacy app (adamap) has been moved to the legacy folder. The Shiny app is still hosted as https://gokhan.shinyapps.io/adamap/
