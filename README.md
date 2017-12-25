@@ -12,27 +12,27 @@ A visual exploration of the Americans for Democratic Action (ADA) Voting Scores.
 ## Features
 
 ### State of the Union
-* Charts a single Year > Chamber > Party combination on a first-level political (administrative) division map displaying either nominal or adjusted LQ score (averaged by state).
+* Charts a single Year > Chamber > Party combination on a first-level political (administrative) division map displaying either nominal or adjusted LQ score (averaged by state):
 
 ![](/img/statebins.png)
 
 ### Change from Last Year
-* Plots LQ score change from previous year (state-level). Hover info offers the precise amount in percentages.
+* Plots LQ score change from previous year (state-level). Hover info offers the precise amount in percentages:
 
 ![](/img/plotly.png)
 
 ### Head-to-Head
-* Allows the user to select two states and compare their voting scores in a specified timeframe. Works under the C/P constraint; i.e. it compares representatives from the same party/chamber.
+* Allows the user to select two states and compare their voting scores in a specified timeframe. Works under the C/P constraint; i.e. it compares representatives from the same party/chamber:
 
 ![](/img/marginal.png)
 
 ### Representatives
-* Enables looking up specific representatives (3,371 in total) found in the dataset; offers descriptives on Year, Congress, District and plots their LQ scores, mean, and plus/minus one standard deviation.
+* Enables looking up specific representatives (3,371 in total) found in the dataset; offers descriptives on Year, Congress, District and plots their LQ scores, mean, and plus/minus one standard deviation:
 
 ![](/img/pelosi.png)
 
 ### Design
-* Users can change viridis colour palettes (viridis, plasma, inferno, and magma) and direction (higher values light or dark)
+* Users can change viridis colour palettes (viridis, plasma, inferno, and magma) and direction (whether higher values are light or dark):
 
 ![](/img/plasma.png)
 
