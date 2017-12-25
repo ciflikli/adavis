@@ -19,6 +19,7 @@ library(showtext)
 theme_set(theme_ipsum_rc())
 font_add_google(name = "Roboto Condensed", family = "Roboto Condensed", regular.wt = 400, bold.wt = 700)
 showtext_auto()
+showtext_opts(dpi = 112)
 
 data <- read_excel("data/ada4715.xlsx")
 data$`Full Name` <- stri_trans_totitle(data$`Full Name`)

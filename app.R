@@ -284,6 +284,8 @@ server <- function(input, output, session){
     
     us <- statebins(mapData(), state_col = "State", value_col = ifelse(input$ADA == "Nominal", "ADA", "aADA"),
                     round = TRUE, font_size = 7, state_border_col = "#232d33",
+                    dark_label = ifelse(input$Switch == FALSE, "white", "black"),
+                    light_label = ifelse(input$Switch == FALSE, "black", "white"),
                     state_border_size = .8, radius = grid::unit(10, "pt")) +
           labs(title = "") +
           theme(axis.text.x = element_blank(), axis.text.y = element_blank(), axis.ticks = element_blank(),

@@ -5,9 +5,9 @@ account: gokhan
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 251493
-bundleId: 1149792
+bundleId: 1150364
 url: https://gokhan.shinyapps.io/adavis/
-when: 1514155828.71722
+when: 1514229795.80629
 asMultiple: FALSE
 asStatic: FALSE
 ignoredFiles: README.html|README.md|legacy_app
