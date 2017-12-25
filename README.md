@@ -2,7 +2,8 @@
 A visual exploration of the Americans for Democratic Action (ADA) Voting Scores. The Shiny app is hosted at https://gokhan.shinyapps.io/adavis/
 
 ## Description
-* Utilizes about 36,000 US legislator voting scores originally collected by [the Americans for Democratic Action (ADA)](http://www.adaction.org/) foundation between 1948 and 2015
+
+* Utilizes about 36,000 US legislator voting scores originally collected by [the Americans for Democratic Action (ADA)](http://www.adaction.org/) foundation between 1947 and 2015
 * "[Annual voting records] served as the standard measure of political liberalism. Combining 20 key votes on a wide range of social and economic issues, both domestic and international, the Liberal Quotient (LQ) provides a basic overall picture of an elected official's political position"
 * Actual data compiled by Justin Briggs [Blog post](http://trialstravails.blogspot.co.uk/2017/01/adjusted-ada-scores-from-1947-2015.html) | [.xlsx file](http://bit.ly/2j1TXfE)
 * Uses both nominal and adjusted ADA scores [Procedure](http://timgroseclose.com/adjusted-interest-group-scores/)
@@ -32,7 +33,7 @@ A visual exploration of the Americans for Democratic Action (ADA) Voting Scores.
 ![](/img/pelosi.png)
 
 ### Design
-* Users can change viridis colour palettes (viridis, plasma, inferno, and magma) and direction (whether higher values are light or dark):
+* Users can change viridis colour palettes (viridis, plasma, inferno, and magma) and direction (whether higher values are light or dark) throughout the app:
 
 ![](/img/plasma.png)
 
