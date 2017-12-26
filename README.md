@@ -1,6 +1,12 @@
 # adavis
 A visual exploration of the Americans for Democratic Action (ADA) Voting Scores. The Shiny app is hosted at https://gokhan.shinyapps.io/adavis/
 
+Alternatively, you can fork it on GitHub (preferred) or download a local copy:
+
+    shiny::runGitHub(username = "ciflikli", repo = "adavis")
+
+Running the above code as it is will remove the files once the app is closed. You can pass an additional ```destdir =``` argument to save the contents locally in a more persistent manner. Make sure you have the required libraries installed; the list can be found at the beginning of global.R script in the app folder.
+
 ## Description
 
 * Utilizes about 36,000 US legislator voting scores originally collected by [the Americans for Democratic Action (ADA)](http://www.adaction.org/) foundation between 1947 and 2015
